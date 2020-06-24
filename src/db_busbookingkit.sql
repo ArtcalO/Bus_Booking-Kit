@@ -1,0 +1,66 @@
+
+
+CREATE TABLE Clients(
+	Id_Client INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	Username TEXT,
+	First_name TEXT,
+	Last_name TEXT,
+	Password TEXT
+)ENGINE=INNODB;
+
+CREATE TABLE Users(
+	Id_User INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	Username TEXT,
+	Password TEXT,
+	Statut TEXT
+)ENGINE=INNODB;
+
+CREATE TABLE Bus(
+	Id_Bus INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	Imatriculation TEXT,
+	Mark TEXT,
+	Seat INT
+)ENGINE=INNODB;
+
+CREATE TABLE Drivers(
+	Id_Driver INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	First_name TEXT,
+	Last_name TEXT,
+	Cell_phone INT,
+	Licence TEXT,
+	CNI TEXT
+
+)ENGINE=INNODB;
+
+CREATE TABLE Locations(
+	Id_Location INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	Location_name Text
+)ENGINE=INNODB;
+
+CREATE TABLE Trips(
+	Id_Trip INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	Id_Bus INT,
+	Id_Driver INT,
+	Id_Arrv INT,
+	Id_Dep INT
+	Dep_hour TEXT
+
+)ENGINE=INNODB;
+
+CREATE TABLE Bookings(
+	Id_Booking INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	First_name TEXT,
+	Last_name TEXT,
+	Cell_phone INT,
+	Id_Trip INT,
+	Id_Seat INT,
+	Price INT
+)ENGINE=INNODB;
+
+CREATE TABLE TripNames(
+	Id_TripNname INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	Id_Trip INT,
+	Id_Bus INT,
+	Trip_Name TEXT
+)ENGINE=INNODB;
+
